@@ -1,5 +1,11 @@
+@font-face {
+  font-family: Middleearth-ao6m;
+  src: url('../fonts/Middleearth-ao6m.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  background-color: lightblue;
+  background-color: #35431E;
   font-family: 'Libre Franklin', sans-serif; 
 }
 
@@ -9,6 +15,7 @@ h1, h2 {
   padding: 15px;
   padding-bottom: 30px;
   text-align: center;
+  font-family: 'Middleearth-ao6m';
 }
 /* h2 {
   color: black;
@@ -56,7 +63,7 @@ li {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   opacity:.8;
-  font-family: 'DeathStar-VmWB';
+  font-family: 'Middleearth-ao6m';
 }
 
 .menu li a {
