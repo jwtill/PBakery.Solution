@@ -1,7 +1,30 @@
-
+@using Bakery.Models;
 @{
   Layout = "_Layout";
 }
-<h1>Welcome to Pierre's Bakery</h1>`
-
+<h1>Welcome to Pierre's Bakery</h1>
+<div class="main">
+  @if (ViewBag.Treats.Count == 0)
+      {
+        <h3>There are no treats to display</h3>
+      }
+      else
+      {  
+        @foreach (Treat treat in ViewBag.Treats)
+            {
+              <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
+            }
+      }
+  @if (ViewBag.Flavors.Count == 0)
+      {
+        <h3>There are no flavors to display</h3>
+      }
+      else
+      {  
+        @foreach (Flavor flavor in ViewBag.Flavors)
+            {
+              <li>@Html.ActionLink($"{flavor.Name}", "Details", new { id = flavor.FlavorId })</li>
+            }
+      }
+</div>
 
