@@ -11,11 +11,12 @@ body {
 
 h1, h2 {
   color: black;
-  background: linear-gradient(0deg, rgba(173,216,230,1) 0%,rgba(255,255,255,1) 50%)no-repeat;
-  padding: 15px;
+  background: linear-gradient(0deg, rgba(173,216,230,1) 0%,rgba(0,0,0,1) 100%)no-repeat;
+  padding: 30px;
   padding-bottom: 30px;
   text-align: center;
   font-family: 'Middleearth-ao6m';
+  border-bottom: 1px solid white;
 }
 /* h2 {
   color: black;
@@ -57,12 +58,11 @@ li {
   border: 1px solid black;
   position: fixed;
   left: 0;
-  top: 100px;
+  top: 50px;
   height: auto;
   overflow: auto;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  opacity:.8;
   font-family: 'Middleearth-ao6m';
 }
 
