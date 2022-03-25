@@ -5,9 +5,9 @@ namespace Bakery.Models
 {
   public class BakeryContext : IdentityDbContext<ApplicationUser> 
   {
-    public DbSet<Tag> Treats { get; set; }
-    public DbSet<Recipe> Flavors { get; set; }
-    public DbSet<RecipeTag> FlavorTreat { get; set; }
+    public DbSet<Treat> Treats { get; set; }
+    public DbSet<Flavor> Flavors { get; set; }
+    public DbSet<FlavorTreat> FlavorTreat { get; set; }
 
     public BakeryContext(DbContextOptions options) : base(options) { }
 

@@ -26,11 +26,11 @@ namespace Bakery
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<RecipeBoxContext>(options => options
+        .AddDbContext<BakeryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
 
       services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<RecipeBoxContext>()
+        .AddEntityFrameworkStores<BakeryContext>()
         .AddDefaultTokenProviders();
 
       services.Configure<IdentityOptions>(options =>
