@@ -26,14 +26,7 @@ namespace Bakery.Controllers
       List<Treat> model = _db.Treats.ToList();
       return View(model);
     }
-    // public async Task<ActionResult> Index()
-    // {
-    //   var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-    //   var currentUser = await _userManager.FindByIdAsync(userId);
-    //   var userItems = _db.Treats.Where(entry => entry.User.Id == currentUser.Id).ToList();
-    //   return View(userItems);
-    // }
-
+ 
     [Authorize]
     public ActionResult Create()
     {
@@ -46,9 +39,9 @@ namespace Bakery.Controllers
     public async Task<ActionResult> Create(Treat treat, int FlavorId)
     {
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-      var currentUser = await _userManager.FindByIdAsync(userId);//gets who's signed in
-      treat.User = currentUser;//sets userId to who's signed in
-      _db.Treats.Add(treat); //adds all that to db
+      var currentUser = await _userManager.FindByIdAsync(userId);
+      treat.User = currentUser;
+      _db.Treats.Add(treat); 
       _db.SaveChanges();
        if (FlavorId != 0)
       {

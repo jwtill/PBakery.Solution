@@ -13,7 +13,7 @@ An MVC application that tracks the relationships between treats and  flavors for
 with the following text:
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=pierres_bakery;uid=root;pwd=[YourPassword];"
+      "DefaultConnection": "Server=localhost;Port=3306;database=josh_tillinghasty;uid=root;pwd=[YourPassword];"
   }
 }
 - Replace [YourPassword] with the password you use to connect to MySQL. 
