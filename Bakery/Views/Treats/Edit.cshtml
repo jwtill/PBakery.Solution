@@ -5,20 +5,21 @@
 @model Bakery.Models.Treat
 
 <h2>Edit</h2>
+<div class="main">
+  <h4>Edit this treat: @Html.DisplayFor(model => model.Name)</h4>
 
-<h4>Edit this treat: @Html.DisplayFor(model => model.Name)</h4>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.TreatId)
 
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.TreatId)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
+    @Html.Label("Select flavor")
+    @Html.DropDownList("FlavorId")
 
-  @Html.Label("Select flavor")
-  @Html.DropDownList("FlavorId")
-
-  <input type="submit" value="Save" class="btn btn-submit"/>
-}
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
+    <input type="submit" value="Save" class="btn btn-submit"/>
+  }
+  <p>@Html.ActionLink("Delete Treat", "Delete", new { id = Model.TreatId })</p>
+  <p>@Html.ActionLink("Back to list", "Index")</p>
+</div>
