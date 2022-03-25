@@ -9,11 +9,14 @@
         <h3>There are no treats to display</h3>
       }
       else
-      {  
-        @foreach (Treat treat in ViewBag.Treats)
+      { 
+        <ul>
+          <li>Treats:</li>
+          @foreach (Treat treat in ViewBag.Treats)
             {
               <li>@Html.ActionLink($"{treat.Name}", "Details", new { id = treat.TreatId })</li>
             }
+        </ul>
       }
   @if (ViewBag.Flavors.Count == 0)
       {
@@ -21,10 +24,13 @@
       }
       else
       {  
-        @foreach (Flavor flavor in ViewBag.Flavors)
-            {
-              <li>@Html.ActionLink($"{flavor.Name}", "Details", new { id = flavor.FlavorId })</li>
-            }
+        <ul>
+          <li>Flavors:</li>
+          @foreach (Flavor flavor in ViewBag.Flavors)
+              {
+                <li>@Html.ActionLink($"{flavor.Name}", "Details", new { id = flavor.FlavorId })</li>
+              }
+        </ul>
       }
 </div>
 
